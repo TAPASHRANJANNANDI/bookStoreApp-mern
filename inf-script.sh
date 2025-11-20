@@ -15,6 +15,6 @@ chmod +x kubectl
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 kubectl version --client
 # Cluster Creation
-eksctl create cluster --name simple-django-app --region ap-south-1 --node-type t3.medium --nodes-min 2 --nodes-max 2
-aws eks update-kubeconfig --region ap-south-1 --name simple-django-app
+eksctl create cluster --name book-app --region ap-south-1 --node-type t3.medium --nodes-min 2 --nodes-max 2
+aws eks update-kubeconfig --region ap-south-1 --name book-app
 kubectl get nodes
