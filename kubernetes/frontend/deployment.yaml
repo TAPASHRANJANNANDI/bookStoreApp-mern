@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-app-frontend-deployment
+  labels:
+    app: book-app-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: book-app-frontend
+  template:
+    metadata:
+      labels:
+        app: book-app-frontend
+    spec:
+      containers:
+      - name: book-app-frontend
+        image: tapashranjannandi/book-app-frontend:latest
+        ports:
+        - containerPort: 5173
+        
